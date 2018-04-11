@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <span><i class="icon iconfont icon-chevron-thin-left"></i></span>
+            <span>无法接</span>
+            <span><i class="icon iconfont icon-shouqi-01"></i></span>
+        </header>
+        <nav>
+            <ul>
+                <li><i class="icon iconfont icon-tuichu"></i></li>
+                <li><i class="icon iconfont icon-iconhuidaoshouye"></i></li>
+                <li><i class="icon iconfont icon-gengduo-2"></i></li>
+                <li><i class="icon iconfont icon-fenxiang1"></i></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="box">
+                1111111111111111111111111111111111
+            </div>
+            <div class="box">
+                22222222222222222222222222222222222
+            </div>
+            <div class="box">
+                333333333333333333333333333333
+            </div>
+            <div class="box">
+                4444444444444444444444444444444444
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var nav = document.querySelector("nav")
+    var lis = nav.querySelectorAll("li");
+    var header = document.querySelector(".header")
+    var spn = header.querySelectorAll("span")
+    var box = document.querySelectorAll(".box")
+
+    for (let i = 0; i < lis.length; i++) {
+        lis[i].onclick = function() {
+            tab(i)
+        }
+    }
+
+    function tab(index) {
+        for (var j = 0; j < spn.length; j++) {
+            box[j].style.display = "none"
+        }
+        box[index].style.display = "block"
+    }
+</script>
